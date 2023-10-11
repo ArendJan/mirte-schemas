@@ -1,0 +1,705 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "device": {
+            "type": "object",
+            "properties": {
+                "mirte": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        },
+                        "mcu": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "number"
+                        },
+                        "max_frequency": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "type"
+                    ]
+                }
+            },
+            "required": [
+                "mirte"
+            ]
+        },
+        "distance": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "trigger": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "echo": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "echo",
+                                "trigger"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "trigger": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "echo": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "echo",
+                                "trigger"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                }
+            },
+            "required": [
+                "left",
+                "right"
+            ]
+        },
+        "encoder": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        },
+                        "ticks_per_wheel": {
+                            "type": "integer"
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        },
+                        "ticks_per_wheel": {
+                            "type": "integer"
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                }
+            },
+            "required": [
+                "left",
+                "right"
+            ]
+        },
+        "intensity": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "digital": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "analog": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "analog",
+                                "digital"
+                            ]
+                        },
+                        "max_frequency": {
+                            "type": "integer"
+                        },
+                        "differential": {
+                            "type": "integer"
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "digital": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "analog": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "analog",
+                                "digital"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                }
+            },
+            "required": [
+                "left",
+                "right"
+            ]
+        },
+        "oled": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "scl": {
+                                    "type": "string"
+                                },
+                                "sda": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "scl",
+                                "sda"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "scl": {
+                                    "type": "string"
+                                },
+                                "sda": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "scl",
+                                "sda"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "left_oled": {
+                    "type": "object",
+                    "properties": {
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "scl": {
+                                    "type": "string"
+                                },
+                                "sda": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "scl",
+                                "sda"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "pins"
+                    ]
+                }
+            }
+        },
+        "servo": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name",
+                        "pins"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "gripper": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "connector": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "arm": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "connector": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "device": {
+                    "type": "string"
+                },
+                "pins": {
+                    "type": "object",
+                    "properties": {
+                        "pin": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "pin"
+                    ]
+                }
+            }
+        },
+        "keypad": {
+            "type": "object",
+            "properties": {
+                "yellow": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "pin": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "pin"
+                            ]
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                }
+            },
+            "required": [
+                "yellow"
+            ]
+        },
+        "motor": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "1a": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "1b": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "en": {
+                                    "type": "string"
+                                },
+                                "in1": {
+                                    "type": "string"
+                                },
+                                "in2": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "right": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "1a": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "1b": {
+                                    "type": [
+                                        "integer",
+                                        "string"
+                                    ]
+                                },
+                                "en": {
+                                    "type": "string"
+                                },
+                                "in1": {
+                                    "type": "string"
+                                },
+                                "in2": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "connector": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name"
+                    ]
+                },
+                "rightBack": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "device": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "pins": {
+                            "type": "object",
+                            "properties": {
+                                "1a": {
+                                    "type": "string"
+                                },
+                                "1b": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "1a",
+                                "1b"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "device",
+                        "name",
+                        "pins",
+                        "type"
+                    ]
+                }
+            },
+            "required": [
+                "left",
+                "right"
+            ]
+        }
+    },
+    "required": [
+        "device"
+    ]
+}
